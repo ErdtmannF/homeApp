@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HomeApp</string>
+    <string name="pumpeEin">Pumpe eingeschaltet!</string>
+    <string name="pumpeAus">Pumpe ausgeschaltet!</string>
+    <string name="heizungEin">Heizung eingeschaltet!</string>
+    <string name="heizungAus">Heizung ausgeschaltet!</string>
+</resources>
