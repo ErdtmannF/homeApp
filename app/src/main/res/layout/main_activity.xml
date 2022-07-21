@@ -1,186 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
 
-
-    <ImageView
-        android:id="@+id/img_pumpe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/sw_pumpe"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sw_pumpe"
-        app:layout_constraintVertical_bias="0.473"
-        app:srcCompat="@drawable/ic_aus" />
-
-    <Switch
-        android:id="@+id/sw_heizung"
-        android:layout_width="150dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
-        android:text="Heizung"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sw_pumpe" />
-
-    <TextView
-        android:id="@+id/tv_pv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="%"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/tv_batt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="%"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintEnd_toEndOf="@+id/img_batt"
-        app:layout_constraintStart_toStartOf="@+id/img_batt"
-        app:layout_constraintTop_toBottomOf="@+id/img_batt" />
-
-    <TextView
-        android:id="@+id/tv_haus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="%"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintEnd_toEndOf="@+id/img_haus"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="@+id/img_haus"
-        app:layout_constraintTop_toBottomOf="@+id/img_haus" />
-
-    <TextView
-        android:id="@+id/tv_netz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="%"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintEnd_toEndOf="@+id/img_netz"
-        app:layout_constraintStart_toStartOf="@+id/img_netz"
-        app:layout_constraintTop_toBottomOf="@+id/img_netz" />
-
-    <TextView
-        android:id="@+id/tv_batt_stand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="%"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintBottom_toTopOf="@+id/img_batt"
-        app:layout_constraintEnd_toEndOf="@+id/img_batt"
-        app:layout_constraintStart_toStartOf="@+id/img_batt" />
-
-    <ImageView
-        android:id="@+id/img_batt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_haus"
-        app:srcCompat="@drawable/ic_batt_blau" />
-
-    <ImageView
-        android:id="@+id/img_haus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/img_pv_haus"
-        app:layout_constraintStart_toStartOf="@+id/img_pv_haus"
-        app:layout_constraintTop_toBottomOf="@+id/img_pv_haus"
-        app:srcCompat="@drawable/ic_house" />
-
-    <ImageView
-        android:id="@+id/img_netz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_haus"
-        app:srcCompat="@drawable/ic_netz" />
-
-    <ImageView
-        android:id="@+id/img_pv_haus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pv"
-        app:srcCompat="@drawable/ic_runter_gruen" />
-
-    <ImageView
-        android:id="@+id/img_batt_haus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/img_haus"
-        app:layout_constraintStart_toEndOf="@+id/img_batt"
-        app:layout_constraintTop_toTopOf="@+id/img_batt"
-        app:srcCompat="@drawable/ic_rechts_rot" />
-
-    <ImageView
-        android:id="@+id/img_netz_haus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/img_netz"
-        app:layout_constraintStart_toEndOf="@+id/img_haus"
-        app:layout_constraintTop_toTopOf="@+id/img_netz"
-        app:srcCompat="@drawable/ic_links_rot" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_sonne" />
-
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="24dp"
-        android:background="#000000"
-        app:layout_constraintTop_toBottomOf="@+id/tv_haus"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_height="match_parent">
 
-    <Switch
-        android:id="@+id/sw_pumpe"
-        android:layout_width="150dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Pumpe"
-        android:textSize="@dimen/default_font_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_haus" />
 
-    <ImageView
-        android:id="@+id/img_heizung"
+
+        <ImageView
+            android:id="@+id/img_pumpe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sw_pumpe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sw_pumpe"
+            app:layout_constraintVertical_bias="0.473"
+            app:srcCompat="@drawable/ic_aus" />
+
+        <Switch
+            android:id="@+id/sw_heizung"
+            android:layout_width="150dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="32dp"
+            android:text="Heizung"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sw_pumpe" />
+
+        <TextView
+            android:id="@+id/tv_pv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="%"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/tv_batt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="%"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/img_batt"
+            app:layout_constraintStart_toStartOf="@+id/img_batt"
+            app:layout_constraintTop_toBottomOf="@+id/img_batt" />
+
+        <TextView
+            android:id="@+id/tv_haus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="%"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/img_haus"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/img_haus"
+            app:layout_constraintTop_toBottomOf="@+id/img_haus" />
+
+        <TextView
+            android:id="@+id/tv_netz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="%"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/img_netz"
+            app:layout_constraintStart_toStartOf="@+id/img_netz"
+            app:layout_constraintTop_toBottomOf="@+id/img_netz" />
+
+        <TextView
+            android:id="@+id/tv_batt_stand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="%"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintBottom_toTopOf="@+id/img_batt"
+            app:layout_constraintEnd_toEndOf="@+id/img_batt"
+            app:layout_constraintStart_toStartOf="@+id/img_batt" />
+
+        <ImageView
+            android:id="@+id/img_batt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_haus"
+            app:srcCompat="@drawable/ic_batt_blau" />
+
+        <ImageView
+            android:id="@+id/img_haus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/img_pv_haus"
+            app:layout_constraintStart_toStartOf="@+id/img_pv_haus"
+            app:layout_constraintTop_toBottomOf="@+id/img_pv_haus"
+            app:srcCompat="@drawable/ic_house" />
+
+        <ImageView
+            android:id="@+id/img_netz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_haus"
+            app:srcCompat="@drawable/ic_netz" />
+
+        <ImageView
+            android:id="@+id/img_pv_haus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pv"
+            app:srcCompat="@drawable/ic_runter_gruen" />
+
+        <ImageView
+            android:id="@+id/img_batt_haus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/img_haus"
+            app:layout_constraintStart_toEndOf="@+id/img_batt"
+            app:layout_constraintTop_toTopOf="@+id/img_batt"
+            app:srcCompat="@drawable/ic_rechts_rot" />
+
+        <ImageView
+            android:id="@+id/img_netz_haus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/img_netz"
+            app:layout_constraintStart_toEndOf="@+id/img_haus"
+            app:layout_constraintTop_toTopOf="@+id/img_netz"
+            app:srcCompat="@drawable/ic_links_rot" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_sonne" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="24dp"
+            android:background="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/tv_haus"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Switch
+            android:id="@+id/sw_pumpe"
+            android:layout_width="150dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Pumpe"
+            android:textSize="@dimen/default_font_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_haus" />
+
+        <ImageView
+            android:id="@+id/img_heizung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sw_heizung"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sw_heizung"
+            app:srcCompat="@drawable/ic_aus" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/sw_heizung"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sw_heizung"
-        app:srcCompat="@drawable/ic_aus" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/main_menu" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+</androidx.drawerlayout.widget.DrawerLayout>

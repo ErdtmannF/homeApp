@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">HomeApp</string>
+    <string name="app_name">Erdtmann HomeApp</string>
     <string name="pumpeEin">Pumpe eingeschaltet!</string>
     <string name="pumpeAus">Pumpe ausgeschaltet!</string>
     <string name="heizungEin">Heizung eingeschaltet!</string>
     <string name="heizungAus">Heizung ausgeschaltet!</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_home">Start</string>
+    <string name="menu_chart">PV Chart</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
