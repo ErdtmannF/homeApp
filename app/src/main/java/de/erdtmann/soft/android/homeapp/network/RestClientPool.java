@@ -17,7 +17,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RestClientPool {
 
-    static final String BASE_URL = "http://pizeropool:9898/";
+    static final String BASE_URL = "http://erdtmann.my-router.de:9898/";
 
     RestApi restApi;
     Context con;

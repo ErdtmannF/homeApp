@@ -9,11 +9,14 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -23,8 +26,9 @@ import de.erdtmann.soft.android.homeapp.network.RestPvHome;
 
 public class MainActivity extends AppCompatActivity {
 
-    public DrawerLayout drawerLayout;
-    public ActionBarDrawerToggle actionBarDrawerToggle;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
 
     ImageButton bt_update;
     RestClientPool restPool;
@@ -49,17 +53,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        // drawer layout instance to toggle the menu icon to open
-        // drawer and back button to close drawer
         drawerLayout = findViewById(R.id.my_drawer_layout);
+        navigationView = findViewById(R.id.NavigationView);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.menu_home: {
+                        Toast.makeText(MainActivity.this, "Start wurde gedrückt", Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                    case R.id.menu_chart: {
+                        Toast.makeText(MainActivity.this, "Chart wurde gedrückt", Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                }
+                return true;
+            }
+        });
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
-        // pass the Open and Close toggle for the drawer layout listener
-        // to toggle the button
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         init();
